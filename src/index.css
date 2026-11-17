@@ -657,3 +657,15 @@ fieldset.settings:disabled .setting:not(.setting-action) { opacity: 0.55; }
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.tagline {
+  margin: 4px 0 0;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+.tagline-sub {
+  margin: 0 0 4px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}

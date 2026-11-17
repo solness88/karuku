@@ -361,7 +361,15 @@ export default function App() {
       </header>
 
       <main className="main">
-        <DropZone onFiles={addFiles} compact={items.length > 0} />
+        {items.length === 0 && (
+            <>
+              <h1 className="tagline">ファイルの回転・サイズ縮小が、超かんたん。</h1>
+              <p className="tagline-sub">
+                PDF・JPG・PNG・HEICに対応。処理はすべてお使いの端末の中で完結します。
+              </p>
+            </>
+          )}
+          <DropZone onFiles={addFiles} compact={items.length > 0} />
         {items.length === 0 && <HowTo />}
 
         {notices.length > 0 && (
