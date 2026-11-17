@@ -669,3 +669,19 @@ fieldset.settings:disabled .setting:not(.setting-action) { opacity: 0.55; }
   color: var(--ink-soft);
   font-size: 0.95rem;
 }
+/* 対応形式のバッジ */
+.formats { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.formats-label { color: var(--ink-soft); font-size: 0.85rem; font-weight: 700; }
+.format-chips { display: flex; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.format-chip {
+  padding: 6px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+.format-pdf { background: #b42318; }
+.format-jpg { background: #1f6f5c; }
+.format-png { background: #6941c6; }
+.format-heic { background: #2f54b4; }

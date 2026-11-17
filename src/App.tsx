@@ -356,20 +356,28 @@ export default function App() {
             <rect x="5" y="11" width="14" height="10" rx="2" />
             <path d="M8 11V8a4 4 0 018 0v3" />
           </svg>
-          ファイルはこの端末から出ません
+            変換処理はローカルで完結します！
         </p>
       </header>
 
       <main className="main">
         {items.length === 0 && (
-            <>
-              <h1 className="tagline">ファイルの回転・サイズ縮小が、超かんたん。</h1>
-              <p className="tagline-sub">
-                PDF・JPG・PNG・HEICに対応。処理はすべてお使いの端末の中で完結します。
-              </p>
-            </>
-          )}
-          <DropZone onFiles={addFiles} compact={items.length > 0} />
+          <>
+            <h1 className="tagline">画像ファイルの回転・サイズ縮小が、超かんたん。</h1>
+            <div className="formats">
+              <span className="formats-label">対応形式</span>
+              <ul className="format-chips">
+                {['PDF', 'JPG', 'PNG', 'HEIC'].map((f) => (
+                  <li key={f} className={`format-chip format-${f.toLowerCase()}`}>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <p className="tagline-sub">変換処理は端末内で完結。アップロード不要。</p>
+          </>
+        )}
+        <DropZone onFiles={addFiles} compact={items.length > 0} />
         {items.length === 0 && <HowTo />}
 
         {notices.length > 0 && (
