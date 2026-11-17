@@ -57,3 +57,4 @@ npm run preview  # ビルド結果の確認
    （Framework: Vite / Build Command: `npm run build` / Output: `dist`）
 
 以降は main ブランチに push するたびに自動でデプロイされます。
+# karuku
